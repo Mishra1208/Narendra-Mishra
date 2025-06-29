@@ -739,3 +739,31 @@ body {
 [data-theme="dark"] .interest-card p {
   color: #f1f1f1;
 }
+.animated-gradient-text {
+  font-weight: bold;
+  background: linear-gradient(
+    -45deg,
+    #3b82f6 0%,
+     #a855f7 20%,
+    #ec4899 50%,
+    #a855f7 80%,
+    #3b82f6 100%
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 8s ease infinite;
+  display: inline-block;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
